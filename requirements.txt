@@ -1,0 +1,26 @@
+Dev-Dependencies:
+1) "@types/express" : TypeScript type definitions for Express.
+2) "@types/node" :    TypeScript type definitions for Node.js.
+3) "concurrently" :   Run multiple commands concurrently.
+4) "ts-node" :        TypeScript execution and REPL for Node.js.
+5) "typescript" :     TypeScript language support.
+
+
+Dependencies:
+
+1) "bcryptjs" :       Library for hashing passwords.
+2) "compression" :    Middleware to compress HTTP responses.
+3) "cookie-parser" :  Middleware for parsing cookies.
+4) "cors" :           Middleware to enable Cross-Origin Resource Sharing (CORS).
+5) "csurf" :          Middleware for CSRF (Cross-Site Request Forgery) protection.
+6) "dotenv" :         Load environment variables from a .env file.
+7) "express" :        Web framework for Node.js.
+8) "helmet" :         Middleware to secure HTTP headers.
+9) "hpp" :            Middleware to prevent HTTP Parameter Pollution attacks.
+10)"joi" :            Object schema validation library.
+11)"jsonwebtoken" :   JSON Web Token (JWT) implementation.
+12)"mongoose" :       MongoDB object modeling for Node.js.
+13)"morgan" :         HTTP request logger middleware.
+14)"multer" :         Middleware for handling multipart/form-data.
+15)"nodemailer" :     Library for sending emails.
+16)"rate-limiter-flexible" : Rate limiting library for Node.js.
