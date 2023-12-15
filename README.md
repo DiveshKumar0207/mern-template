@@ -21,8 +21,10 @@ This is a template repository for projects using the `MERN` (MongoDB, Express.js
 │ ├── config/
 │    ├── database/
 │    ├── keys/
+│ ├── db/ 
+│    ├── connection/  
+│    ├── models/  
 │ ├── middleware/ 
-│ ├── models/  
 │ ├── router/ 
 │    ├──  controllers/
 │    ├──  routes/
