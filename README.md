@@ -15,7 +15,7 @@ This is a template repository for projects using the `MERN` (MongoDB, Express.js
 │ ├── prettier.config.js/      
 │ ├── tailwind.config.js/      
 │ ├── package.json/      
-│ ----other files nd configuration  
+│ ----other files and configuration  
 ├── server/     
 │ ├── @types/   
 │ ├── config/
@@ -59,16 +59,16 @@ Feel free to explore the documentation of both [Tailwind CSS](https://tailwindcs
 2. Navigate to the project directory:
 
    ```bash
-   cd mern-stack-template
+   cd mern-template
    ```
 
 3. Install dependencies:
 
    ```bash
-   # Install server dependencies
+   # Install SERVER dependencies
    npm install
 
-   # Install client dependencies
+   # Install CLIENT dependencies
    cd ../client
    npm install
    ```
@@ -81,13 +81,13 @@ Feel free to explore the documentation of both [Tailwind CSS](https://tailwindcs
 5. Run the development server:
 
    ```bash
-   # Start the server
+   # Start the SERVER
    npm run dev
 
-   # Start both client and server
+   # Start both CLIENT and SERVER
    npm run both
 
-   # Start the client
+   # Start the CLIENT
    cd ../client
    npm run dev 
    ```
