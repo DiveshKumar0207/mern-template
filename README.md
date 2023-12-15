@@ -92,7 +92,7 @@ Feel free to explore the documentation of both [Tailwind CSS](https://tailwindcs
    npm run dev 
    ```
 
-6. Open your browser and visit `http://localhost:3000` to see the React application.
+6. Open your browser and visit `http://localhost:5173` (vite default port) to see the React application.
 
 ## Additional Instructions
 
