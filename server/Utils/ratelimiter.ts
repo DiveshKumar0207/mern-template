@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { RateLimiterMemory } from "rate-limiter-flexible";
+import { logCustomMessage } from "./logger";
 
 const rateLimiter = new RateLimiterMemory({
   points: 5, // Number of points
@@ -19,6 +20,7 @@ export const rateLimiterMiddleware = (
     })
     .catch(() => {
       // Request denied due to rate limiting
+      logCustomMessage("Too Many Requests: rateLimiter ");
       res.status(429).send("Too Many Requests");
     });
 };

@@ -1,14 +1,17 @@
 import { Request, Response } from "express";
 import { logCustomMessage } from "../../utils/logger";
 
+// Create an instance of the Tokens class
+
 const userController = {
-  //Route-1  route = "/api/"
+  //*Route-1 route get "/api/"
   index: (req: Request, res: Response) => {
-    res.send("hello");
+    res.send("get method");
   },
 
-  home: (req: Request, res: Response) => {
-    res.send("home");
+  //*Route-2 route POST "/api/example"
+  example: (req: Request, res: Response) => {
+    res.send("post method");
   },
 };
 

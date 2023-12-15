@@ -2,7 +2,7 @@ import express, { Request, Response, NextFunction } from "express";
 import connectToDatabase from "./db/connection/connect";
 import hpp from "hpp";
 import helmet from "helmet";
-import csurf from "csurf";
+import csrf from "csrf";
 import cors from "cors";
 import compression from "compression";
 import cookieParser from "cookie-parser";
@@ -30,8 +30,25 @@ app.use(helmet());
 // Enable HPP middleware to prevent HTTP Parameter Pollution attacks
 app.use(hpp());
 
-// Enable CSRF protection with csurf middleware   // Send csrfToken via query/body in while post-type request
-app.use(csurf({ cookie: true }));
+const csrfProtection = new csrf();
+const secret = csrfProtection.secretSync();
+
+// Enable CSRF protection with csrf middleware
+app.use((req, res, next) => {
+  const token = csrfProtection.create(secret);
+  res.setHeader("X-CSRF-Token", token);
+
+  if (req.method !== "GET") {
+    const submittedToken = req.body.csrfToken || req.headers["X-CSRF-Token"];
+    if (!submittedToken) {
+      return res.status(400).send("Missing CSRF token");
+    }
+    if (!csrfProtection.verify(secret, submittedToken)) {
+      return res.status(400).send("Invalid CSRF token");
+    }
+  }
+  next();
+});
 
 // Use rate limiter middleware
 app.use(rateLimiterMiddleware);
