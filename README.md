@@ -1,6 +1,6 @@
 # MERN Stack Template
 
-This is a template repository for projects using the MERN (MongoDB, Express.js, React, Node.js) stack + TS(Typescript). It provides a basic project structure to help you get started quickly.
+This is a template repository for projects using the `MERN` (MongoDB, Express.js, React, Node.js) stack + `TS` (Typescript). It provides a basic project structure to help you get started quickly.
 
 ## Project Structure
 
@@ -19,6 +19,8 @@ This is a template repository for projects using the MERN (MongoDB, Express.js, 
 ├── server/     
 │ ├── @types/   
 │ ├── config/
+│    ├── database/
+│    ├── keys/
 │ ├── middleware/ 
 │ ├── models/  
 │ ├── router/ 
@@ -34,6 +36,18 @@ This is a template repository for projects using the MERN (MongoDB, Express.js, 
 ├── README.md 
 
 ````
+
+## Styling
+
+### Tailwind CSS
+
+This project utilizes [Tailwind CSS](https://tailwindcss.com/) for styling. Tailwind CSS is a utility-first CSS framework that provides low-level utility classes to build designs directly in your markup.
+
+### Material Tailwind
+
+Additionally, the project incorporates [Material Tailwind](https://material-tailwind.com/), a Material Design component library built on top of Tailwind CSS. Material Tailwind provides ready-to-use components that follow the Material Design guidelines.
+
+Feel free to explore the documentation of both [Tailwind CSS](https://tailwindcss.com/docs) and [Material Tailwind](https://material-tailwind.com/docs) for more details on styling and available components.
 
 ## Getting Started
 
@@ -52,7 +66,6 @@ This is a template repository for projects using the MERN (MongoDB, Express.js, 
 
    ```bash
    # Install server dependencies
-   cd server
    npm install
 
    # Install client dependencies
@@ -63,18 +76,20 @@ This is a template repository for projects using the MERN (MongoDB, Express.js, 
 4. Set up environment variables:
 
    - Create a `.env` file in the `server` directory.
-   - Copy the contents from `.env.example` and update the values.
+      - Enter necessary info like PORT, DatabaseURL etc 
 
 5. Run the development server:
 
    ```bash
    # Start the server
-   cd ../server
    npm run dev
+
+   # Start both client and server
+   npm run both
 
    # Start the client
    cd ../client
-   npm start
+   npm run dev 
    ```
 
 6. Open your browser and visit `http://localhost:3000` to see the React application.
